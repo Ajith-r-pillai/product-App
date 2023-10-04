@@ -34,7 +34,7 @@ useEffect(()=>{
      const result=await axios.post('http://localhost:8000/AddSubcategory',body)
     
     alert(result.data.message)
-    navigate('/')
+    // navigate('/')
    
 }catch(error){
     

@@ -5,8 +5,12 @@ function Subcategories({data,subcategory,poducts}) {
   const [refreshCount, setRefreshCount] = useState([]);
 const Navigate=useNavigate()
  let count=[]
-//  count=poducts.filter((item)=>item.parentid==data.sid?item.parentid:item.pgparentid.filter=((item)=>item==data.sid))
+ const Reloadpageview=(e)=>{
+  Navigate('/view/'+data.sid)
+  window.location.reload()
 
+}
+//  count=poducts.filter((item)=>item.parentid==data.sid?item.parentid:item.pgparentid.filter=((item)=>item==data.sid))
 function countObjectsAndNestedArray(arr, numberToMatch) {
   let count = 0;
 
@@ -44,7 +48,7 @@ const result = countObjectsAndNestedArray(poducts,data.sid);
 
 // console.log(numberToMatch,result);
   return (
- <Link  style={{textDecoration:'none'}} to={'/view/'+data.sid}>
+ <Link  style={{textDecoration:'none'}} to={'/view/'+data.sid} onClick={(e)=>Reloadpageview(e)}>
 
       <div className=''style={{marginTop:"2rem"}} >
       <div class="card" style={{width: "20rem",display:'flex',fontFamily:"Quicksand"}}>
@@ -59,6 +63,7 @@ const result = countObjectsAndNestedArray(poducts,data.sid);
             </div>
       </div>
     </div></div>
+  
  </Link>
   )
 }

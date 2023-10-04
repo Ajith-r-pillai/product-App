@@ -15,7 +15,7 @@ function Productview() {
 
 const Params=useParams()
 
- 
+
  
  const fetchData = async () => {
   const result = await axios.get("http://localhost:8000/getaCategory/"+Params.id);

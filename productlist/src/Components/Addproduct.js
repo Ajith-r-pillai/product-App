@@ -38,7 +38,7 @@ function Addproduct() {
              const result=await axios.post('http://localhost:8000/addProduct',body)
             
             alert(result.data.message)
-            navigate('/')
+            // navigate('/')
            
         }catch(error){
             
