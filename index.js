@@ -1,9 +1,10 @@
 const express=require('express')
 const logic=require('./service/logic')
 const PORT=process.env.PORT||8000
+ const FPORT=3000
 const app=express()  
 const cors=require('cors')
- app.use(cors({origin:'http://localhost:3000'}))
+ app.use(cors({origin:`http://localhost:${FPORT}`}))
 
  app.use(express.json())
 
